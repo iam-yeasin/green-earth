@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
-    <!-- taiwind & daisy -->
+    <!-- tailwind & daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -30,11 +30,12 @@
 
         <div class="flex justify-around items-center text-center bg-[#CFF0DC]">
             <img src="assets/hero-leaf1.png" alt="">
-            <div class="">
+            <div>
                 <h1 class="text-5xl font-bold">Plant a Tree, Grow a Future</h1>
-                <p class="my-5 text-[#1f293799]">Join our mission to plant 1 million trees and make the Earth greener
-                    for future <br>
-                    generations.</p>
+                <p class="my-5 text-[#1f293799]">
+                    Join our mission to plant 1 million trees and make the Earth greener for future <br>
+                    generations.
+                </p>
                 <button class="bg-[#FACC15] text-[#15803D] rounded-full py-1 px-3 cursor-pointer">Get Involved</button>
             </div>
             <img src="assets/hero-leaf2.png" alt="">
@@ -45,111 +46,36 @@
         <h1 class="text-2xl font-semibold text-center pt-15 pb-10">Choose Your Trees</h1>
         <section class="w-11/12 mx-auto grid grid-cols-12 gap-5">
 
+            <!-- left aside -->
             <aside class="col-span-2">
                 <h6 class="text-xl font-semibold">Categories</h6>
-                <ul class="py-5">
-                    <li>All Trees</li>
-                    <li>Fruit Trees</li>
-                    <li>Flowering Trees</li>
-                    <li>Shade Trees</li>
-                    <li>Medicinal Trees</li>
-                    <li>Timber Trees</li>
-                    <li>Evergreen Trees</li>
-                    <li>Ornamental Plants</li>
-                    <li>Bamboo</li>
-                    <li>Climbers</li>
-                    <li>Aquatic Plants</li>
+                <ul class="py-5" id="category-list">
+                    <!-- categories will come from JS -->
                 </ul>
             </aside>
 
-            <section class="col-span-8 grid grid-cols-3 gap-5">
-                <div class="card bg-base-100 shadow-sm">
-                    <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
-                        </p>
-                        <div class="card-actions justify-between">
-                            <div class="badge bg-[#DCFCE7] text-[#15803D]">Furit Tree</div>
-                            <div class="badge">৳500</div>
-                            <button class="btn w-full bg-[#15803D] text-white rounded-full">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-sm">
-                    <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
-                        </p>
-                        <div class="card-actions justify-between">
-                            <div class="badge bg-[#DCFCE7] text-[#15803D]">Furit Tree</div>
-                            <div class="badge">৳500</div>
-                            <button class="btn w-full bg-[#15803D] text-white rounded-full">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-sm">
-                    <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
-                        </p>
-                        <div class="card-actions justify-between">
-                            <div class="badge bg-[#DCFCE7] text-[#15803D]">Furit Tree</div>
-                            <div class="badge">৳500</div>
-                            <button class="btn w-full bg-[#15803D] text-white rounded-full">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-sm">
-                    <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
-                        </p>
-                        <div class="card-actions justify-between">
-                            <div class="badge bg-[#DCFCE7] text-[#15803D]">Furit Tree</div>
-                            <div class="badge">৳500</div>
-                            <button class="btn w-full bg-[#15803D] text-white rounded-full">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- main container -->
+            <section class="col-span-8 grid grid-cols-3 gap-5" id="tree-cards">
+
             </section>
 
+            <!-- right aside -->
             <aside class="col-span-2 bg-white py-5 px-5 rounded-lg">
                 <h6 class="text-xl font-semibold mb-4">Your Cart</h6>
+                <div id="cart-items">
 
-                <div class="bg-[#F0FDF4] p-3 rounded-md">
-                    <div class="flex justify-between items-center">
-
-                        <div>
-                            <p class="font-semibold">Mango Tree</p>
-                            <p class="text-[#1f293775]">৳500</p>
-                        </div>
-
-                        <button class="text-lg text-[#1f293775] cursor-pointer">x</button>
-                    </div>
                 </div>
                 <div class="border-[#1f293720] border-t mt-4 pt-2 flex justify-between">
                     <p class="font-semibold">Total:</p>
-                    <p class="font-semibold">৳1000</p>
+                    <p class="font-semibold" id="cart-total">৳0</p>
                 </div>
             </aside>
 
         </section>
 
+        <!-- about section -->
         <section class="w-11/12 mx-auto">
             <h1 class="text-2xl font-semibold text-center pt-20 pb-10">About the Campaign</h1>
-
             <div class="grid grid-cols-12">
                 <div class="col-span-2"></div>
                 <div class="col-span-8 flex flex-col md:flex-row items-center gap-10 mb-20">
@@ -162,78 +88,58 @@
                             Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you
                             help restore forests, create habitats for wildlife, and combat global warming.
                         </p>
-
                         <ul class="list-disc list-inside space-y-2">
                             <li>Restoration of natural habitats</li>
                             <li>Improvement of air quality</li>
                             <li>Support for local communities</li>
                         </ul>
                     </div>
-
                 </div>
                 <div class="col-span-2"></div>
             </div>
         </section>
 
+        <!-- impact section -->
         <section class="bg-[#CFF0DC] pb-20">
             <h1 class="text-2xl font-semibold text-center pt-20 pb-10">Our Impact</h1>
-            <div class="flex justify-center text-center gap-10">
-                <div class="bg-white py-10 flex-1 max-w-lg rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <h1 class="text-xl font-semibold text-[#15803D]">500K+</h1>
-                    <p class="text-[#1f2937b8] pt-2">Trees Planted</p>
-                </div>
-                <div class="bg-white py-10 flex-1 max-w-lg rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <h1 class="text-xl font-semibold text-[#15803D]">120+</h1>
-                    <p class="text-[#1f2937b8] pt-2">Communities Involved</p>
-                </div>
-                <div class="bg-white py-10 flex-1 max-w-lg rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <h1 class="text-xl font-semibold text-[#15803D]">30+</h1>
-                    <p class="text-[#1f2937b8] pt-2">Countries Reached</p>
-                </div>
+            <div class="flex justify-center text-center gap-10" id="impact-cards">
+
             </div>
         </section>
 
+
         <section class="bg-[#166534] pb-20">
-            <h1 class="text-3xl font-semibold text-white text-center pt-20 pb-10">
-                Plant a Tree Today
-            </h1>
-
+            <h1 class="text-3xl font-semibold text-white text-center pt-20 pb-10">Plant a Tree Today</h1>
             <form action="" class="w-11/12 md:w-1/3 mx-auto bg-[#15803D] p-6 rounded-lg shadow-md space-y-4">
-
                 <div>
                     <input type="text" id="name" placeholder="Your Name" required
                         class="w-full px-4 py-2 border rounded-md focus:outline-none bg-white" />
                 </div>
-
                 <div>
                     <input type="email" id="email" placeholder="example@email.com" required
                         class="w-full px-4 py-2 border rounded-md focus:outline-none bg-white" />
                 </div>
-
                 <div>
-                    <select id="trees" required
-                        class="w-full px-4 py-2 border rounded-md focus:outline-none bg-white">
+                    <select id="trees" required class="w-full px-4 py-2 border rounded-md focus:outline-none bg-white">
                         <option value="" disabled selected>Number of Trees</option>
                         <option value="1">1 Tree - $5</option>
                         <option value="5">5 Trees - $25</option>
                         <option value="10">10 Trees - $50</option>
                     </select>
                 </div>
-
                 <button type="submit"
                     class="w-full bg-[#FACC15] text-[#15803D] font-semibold py-2 rounded-full hover:bg-green-800 hover:text-white cursor-pointer">
                     Donate Now
                 </button>
-
             </form>
         </section>
 
         <footer class="text-center text-white py-5 bg-[#14532D]">
             <p>© 2025 Green Earth. All Rights Reserved.</p>
         </footer>
-
     </main>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
