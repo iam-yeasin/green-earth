@@ -4,13 +4,21 @@ let allTrees = [];
 let activeCategory = "All Trees";
 
 const loadTrees = () => {
+  const cardContainer = document.getElementById("tree-cards");
+
+  // show loader
+  cardContainer.innerHTML = `<div class="flex justify-center w-full py-20"><span class="loading loading-infinity loading-xl"></span></div>`;
+
   fetch("https://openapi.programming-hero.com/api/plants")
     .then(res => res.json())
     .then(data => {
       allTrees = data.plants;
       displayTrees(allTrees);
     })
-    .catch(err => console.error("Error loading trees:", err));
+    .catch(err => {
+      console.error("Error loading trees:", err);
+      cardContainer.innerHTML = `<p class="text-center text-red-500 py-10">Failed to load trees</p>`;
+    });
 };
 
 //     card container
@@ -59,6 +67,11 @@ const showTreeDetails = (id) => {
 
 
 const loadCategories = () => {
+  const categoryList = document.getElementById("category-list");
+  
+  // show loader
+  categoryList.innerHTML = `<div class="flex justify-center py-5"><span class="loading loading-infinity loading-md"></span></div>`;
+
   fetch("https://openapi.programming-hero.com/api/categories")
     .then(res => res.json())
     .then(data => displayCategories(data.categories))
@@ -66,7 +79,7 @@ const loadCategories = () => {
 };
 
 //     left aside Categories
-  const displayCategories = (categories) => {
+const displayCategories = (categories) => {
   const categoryList = document.getElementById("category-list");
   categoryList.innerHTML = "";
 
