@@ -6,7 +6,7 @@ let activeCategory = "All Trees";
 const loadTrees = () => {
   const cardContainer = document.getElementById("tree-cards");
 
-  // show loader only for tree cards
+  // show loader for tree cards
   cardContainer.innerHTML = `<div class="col-span-full flex justify-center w-full py-20"><span class="loading loading-infinity loading-xl"></span></div>`;
 
   fetch("https://openapi.programming-hero.com/api/plants")
